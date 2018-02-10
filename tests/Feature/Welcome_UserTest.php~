@@ -1,0 +1,22 @@
+<?php
+
+namespace Tests\Feature;
+
+use Tests\TestCase;
+use Illuminate\Foundation\Testing\WithFaker;
+use Illuminate\Foundation\Testing\RefreshDatabase;
+
+class Welcome_UserTest extends TestCase
+{
+//   public function WelcomeUserNOApdo() {
+//        $this->get('/saludo/Ramon')
+//            ->assertStatus(200)
+//            ->assertSee('Bienvenido Ramon, no tienes apodo');
+//    }
+
+//    public function Welcome_UserApdo() {
+//       $this->get('/saludo/Ramon/Chupiro')
+//           ->assertStatus(200)
+//           ->assertSee('Bienvenido Ramon, tu apodo es Chupiro');
+//    }
+}
