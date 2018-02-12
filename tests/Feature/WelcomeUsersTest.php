@@ -15,6 +15,9 @@ class WelcomeUsersTest extends TestCase
      * @return void
      */
         public function test_welcome_user_noApdo(){
+            $this->withoutExceptionHandling(); //Esta opcion nos sirve para que en caso de que la prueba
+                                              // falle muestre informacion detallada acerca del error.
+
             $this->get('/saludo/Aurelio')
                 ->assertStatus(200)
                 ->assertSee('Bienvenido Aurelio, no tienes apodo');
