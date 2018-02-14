@@ -20,14 +20,14 @@ Route::get('/', function () {
 |Ejemplo #1
 |
 */
-Route::get('/usuarios', 'Controller_usersModule@index_users');
+Route::get('/usuarios', 'Controller_usersModule@index_users')->name('index.users');
 
-Route::get('/usuarios/{id}', 'Controller_usersModule@show_detail_user')->where('id', '[0-9]+');
+Route::get('/usuarios/{user_name}/{id}', 'Controller_usersModule@show_detail_user')->where('user_name','[A-Za-z]+')->where('id', '[0-9]+')->name('user.details');
 
 /*
  *Ejemplo #3
  */
-Route::get('/usuarios/nuevo', 'Controller_usersModule@new_user');
+Route::get('/usuarios/nuevo', 'Controller_usersModule@new_user')->name('new.user');
 
 
-Route::get('/saludo/{name}/{nickname?}', 'WelcomeUserController');
+Route::get('/saludo/{name}/{nickname?}', 'WelcomeUserController')->name('welcome.user');

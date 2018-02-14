@@ -28,6 +28,12 @@ class Users_ModuleTest extends TestCase
             ->assertSee('Joel');
     }
 
+    public function test_empty_users() {
+        $this->get('/usuarios?empty')
+            ->assertStatus(200)
+            ->assertSee('No hay usuarios registrados');
+    }
+
 
     /**
      *Load the details of users
