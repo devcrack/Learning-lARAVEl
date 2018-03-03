@@ -33,18 +33,25 @@ class Controller_usersModule extends Controller
     }
 
     public function show_detail_user($user_name, $id) {
-//        dd($user_name); //Muestra el contenido de las variables en el explorador sirve para debugeear.
+        //dd($user_name); //Muestra el contenido de las variables en el explorador sirve para debugeear.
         foreach ($this->users as $user) {
             if ($user == $user_name) {
-                return view('user_details')
+                /*return view('user_details')
+                    ->with('user_name', $user)
+                    ->with('user_id', $id);*/
+                return view('user-show')
                     ->with('user_name', $user)
                     ->with('user_id', $id);
             }
         }
 //        return "Mostrando detalle del Usuario = {$id}";
-        return view('user_details')
+
+/*        return view('user_details')
             ->with('user_name',null)
-            ->with('user_id',$id);
+            ->with('user_id',$id);*/
+        return view('users-show')
+            ->with('user_name', null)
+            ->with('user_id', $id);
     }
 
     public function new_user(){

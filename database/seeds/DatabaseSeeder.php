@@ -12,5 +12,9 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // $this->call(UsersTableSeeder::class);
+        /**
+         *
+         * Invocamos al seeder que creamos */
+        $this->call(Profession_Seeder::class); //|Se obtiene el nombre de la clase.
     }
 }

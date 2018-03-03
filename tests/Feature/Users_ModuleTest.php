@@ -39,9 +39,10 @@ class Users_ModuleTest extends TestCase
      *Load the details of users
      */
     public function test_load_detail_user() {
-        $this->get('/usuarios/5')
+        $this->get('/usuarios/Ramon/5')
             ->assertStatus(200)
-            ->assertSee('Mostrando detalle del Usuario = 5');
+            ->assertSee('Detalle de Usuario:')
+            ->assertSee('Usuario:Ramon id = 5');
     }
 
     public function test_crear_nuevo_usuario() {

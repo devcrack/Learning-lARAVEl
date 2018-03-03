@@ -31,3 +31,4 @@ Route::get('/usuarios/nuevo', 'Controller_usersModule@new_user')->name('new.user
 
 
 Route::get('/saludo/{name}/{nickname?}', 'WelcomeUserController')->name('welcome.user');
+
